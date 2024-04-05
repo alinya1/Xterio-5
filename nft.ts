@@ -114,7 +114,7 @@ class task {
     
     async mint_nft() {
         try {
-            const gasPrice = ethers.utils.parseUnits("0.002", "gwei"); // 设置 Gas Price 为 10 Gwei
+            const gasPrice = ethers.utils.parseUnits("0.003", "gwei"); // 设置 Gas Price 为 10 Gwei
             const transaction = {
                 to: '0xBeEDBF1d1908174b4Fc4157aCb128dA4FFa80942',
                 value: ethers.utils.parseEther("0"),
