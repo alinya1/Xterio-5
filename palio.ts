@@ -223,12 +223,13 @@ class task {
 
 
 async function Run() {
+    const proxy = process.env.Xiaohua_Proxy;
     for (let i = 0; i < keyPairs.length; i++) {
         const address = keyPairs[i].address;
         const privateKey = keyPairs[i].privateKey;
         const id_token = keyPairs[i].id_token;
         console.log(`【${i}】${address}:Run...`);
-        const myTask = new task(address, privateKey, id_token, 'http://user-xiaohuacc1:xiaohuacc1@pr.roxlabs.cn:4600');
+        const myTask = new task(address, privateKey, id_token, proxy);
         await myTask.Run();
     }
 }
